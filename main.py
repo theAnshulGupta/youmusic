@@ -90,6 +90,7 @@ def main(host=IP, port=7000):
     dsp = 0
     
     values = {'start': start, 'emotion': emotion, 'dis': dis, 'dspToggle': dspToggle}
+    
     try:
         print("init values")
         socket.send(values)
