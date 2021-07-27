@@ -1,4 +1,4 @@
-#N canvas 0 25 1440 788 12;
+#N canvas 0 25 1440 785 12;
 #X obj 725 284 float;
 #X obj 726 306 + 1;
 #X floatatom 663 360 5 0 0 0 - - -;
@@ -82,7 +82,7 @@
 #X obj 304 365 s 16th;
 #X obj 107 365 s 8th;
 #X obj 746 359 spigot;
-#X obj 833 265 tgl 25 0 empty empty empty 17 7 0 10 -4034 -1 -1 1 1
+#X obj 833 265 tgl 25 0 empty empty empty 17 7 0 10 -4034 -1 -1 0 1
 ;
 #X obj 1260 354 spigot;
 #X obj 946 264 * -1;
@@ -99,10 +99,10 @@
 #X obj 744 121 + 1;
 #X obj 744 145 mod 16;
 #X obj 744 72 r 16th;
-#X msg 592 104 tempo \$1 permin;
+#X msg 646 42 tempo \$1 permin;
 #X obj 553 77 / 2;
-#X obj 584 215 metro;
-#X obj 573 278 s half_note;
+#X obj 643 215 metro;
+#X obj 631 276 s half_note;
 #X obj 1269 467 bng 20 250 50 0 empty empty empty 17 7 0 10 -258113
 -1 -1;
 #X obj 1299 442 bng 20 250 50 0 empty empty empty 17 7 0 10 -258113
@@ -116,14 +116,14 @@
 #X obj 375 203 receive switch;
 #X obj 348 -6 loadbang;
 #X msg 398 20 1;
-#X obj 423 729 tgl 30 0 empty empty empty 17 7 0 10 -4034 -1 -1 1 1
+#X obj 423 729 tgl 30 0 empty empty empty 17 7 0 10 -4034 -1 -1 0 1
 ;
 #X obj 235 417 r half_note;
 #X obj 293 585 bng 15 250 50 0 empty empty empty 17 7 0 10 -159808
 -1 -1;
 #X floatatom 72 647 5 0 0 0 - - -;
 #X floatatom 131 651 5 0 0 0 - - -;
-#N canvas 388 25 859 780 choose 1;
+#N canvas 388 25 859 780 choose 0;
 #X obj 160 583 *;
 #X obj 211 403 select 1 2 3 4 5 6 7;
 #X msg 148 494 1;
@@ -204,7 +204,7 @@
 #X connect 34 0 33 0;
 #X connect 35 0 28 0;
 #X restore 267 616 pd choose;
-#N canvas 55 97 806 716 general_chord_builder 1;
+#N canvas 55 94 806 716 general_chord_builder 0;
 #X obj 46 36 inlet;
 #X obj 294 39 inlet;
 #X text 89 12 frequency;
@@ -213,7 +213,7 @@
 #X floatatom 343 61 5 0 0 0 - - -;
 #X obj 218 84 bng 15 250 50 0 empty empty empty 17 7 0 10 -159808 -1
 -1;
-#N canvas 35 25 773 566 chord_builder 1;
+#N canvas 34 25 773 566 chord_builder 0;
 #X obj 46 36 inlet;
 #X obj 294 39 inlet;
 #X text 89 12 frequency;
@@ -322,7 +322,7 @@
 #X connect 36 0 28 0;
 #X connect 36 0 31 0;
 #X restore 98 248 pd chord_builder;
-#N canvas 634 25 806 562 dissonant_chord_builder 1;
+#N canvas 634 25 806 562 dissonant_chord_builder 0;
 #X obj 46 36 inlet;
 #X obj 294 39 inlet;
 #X text 89 12 frequency;
@@ -504,7 +504,7 @@
 #X connect 32 0 8 1;
 #X connect 33 0 7 1;
 #X restore 183 675 pd general_chord_builder;
-#N canvas 99 55 450 300 chord_player 1;
+#N canvas 99 55 450 300 chord_player 0;
 #X obj 76 41 inlet;
 #X obj 133 42 inlet;
 #X obj 182 45 inlet;
@@ -541,7 +541,7 @@ whether the 7th note should be played;
 #X floatatom 30 585 5 0 0 0 - - -;
 #X obj 177 576 t b b;
 #X obj 169 606 f 440;
-#N canvas 200 100 618 586 modulate 1;
+#N canvas 200 100 618 586 modulate 0;
 #X floatatom 221 320 5 0 0 0 - - -;
 #X obj 64 38 inlet;
 #X floatatom 69 73 5 0 0 0 - - -;
@@ -975,12 +975,12 @@ whether the 7th note should be played;
 #X obj 1747 34 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 1721 336 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X obj 1721 356 send tdsp;
 #X msg 1747 54 send dspToggle \$1;
 #X obj 1308 262 route start tempo emotion diss dspToggle;
 #X obj 1631 594 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X msg 1631 615 \; pd dsp \$1;
 #X obj 1633 506 r tdsp;
 #X connect 0 0 1 0;
