@@ -1,4 +1,4 @@
-#N canvas 75 26 1291 597 12;
+#N canvas 101 23 1291 597 12;
 #X obj 725 284 float;
 #X obj 726 306 + 1;
 #X floatatom 663 360 5 0 0 0 - - -;
@@ -82,7 +82,7 @@
 #X obj 304 365 s 16th;
 #X obj 107 365 s 8th;
 #X obj 746 359 spigot;
-#X obj 833 265 tgl 25 0 empty empty empty 17 7 0 10 -4034 -1 -1 1 1
+#X obj 833 265 tgl 25 0 empty empty empty 17 7 0 10 -4034 -1 -1 0 1
 ;
 #X obj 1260 354 spigot;
 #X obj 946 264 * -1;
@@ -116,7 +116,7 @@
 #X obj 375 203 receive switch;
 #X obj 348 -6 loadbang;
 #X msg 398 20 1;
-#X obj 423 729 tgl 30 0 empty empty empty 17 7 0 10 -4034 -1 -1 1 1
+#X obj 423 729 tgl 30 0 empty empty empty 17 7 0 10 -4034 -1 -1 0 1
 ;
 #X obj 235 417 r half_note;
 #X obj 293 585 bng 15 250 50 0 empty empty empty 17 7 0 10 -159808
@@ -978,11 +978,11 @@ whether the 7th note should be played;
 1 1;
 #X obj 1721 356 send tdsp;
 #X msg 1747 54 send dspToggle \$1;
-#X obj 1308 262 route start tempo emotion diss dspToggle;
 #X obj 1631 594 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
 1 1;
 #X msg 1631 615 \; pd dsp \$1;
 #X obj 1633 506 r tdsp;
+#X obj 1308 262 route start tempo emotion dis dspToggle;
 #X connect 0 0 1 0;
 #X connect 1 0 0 1;
 #X connect 1 0 20 0;
@@ -1133,7 +1133,7 @@ whether the 7th note should be played;
 #X connect 125 0 127 0;
 #X connect 126 0 118 0;
 #X connect 127 0 122 0;
-#X connect 127 0 144 0;
+#X connect 127 0 147 0;
 #X connect 127 1 112 0;
 #X connect 128 0 118 0;
 #X connect 130 0 118 0;
@@ -1146,11 +1146,11 @@ whether the 7th note should be played;
 #X connect 140 0 143 0;
 #X connect 141 0 142 0;
 #X connect 143 0 118 0;
-#X connect 144 0 114 0;
-#X connect 144 1 123 0;
-#X connect 144 2 132 0;
-#X connect 144 3 134 0;
-#X connect 144 4 141 0;
-#X connect 144 5 115 0;
-#X connect 145 0 146 0;
-#X connect 147 0 145 0;
+#X connect 144 0 145 0;
+#X connect 146 0 144 0;
+#X connect 147 0 114 0;
+#X connect 147 1 123 0;
+#X connect 147 2 132 0;
+#X connect 147 3 134 0;
+#X connect 147 4 141 0;
+#X connect 147 5 115 0;
