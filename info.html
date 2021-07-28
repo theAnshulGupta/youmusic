@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>You Music</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1>You Music</h1>
+        <p>By Anshul Gupta, Andrew Liu, and Kat Guo</p>
+      </header>
+
+      <!-- Main -->
+      <div id="main">
+        <!-- Content -->
+        <section id="content" class="main">
+          <span class="image main"><img src="images/pic04.jpg" alt="" /></span>
+          <h2>Procedure</h2>
+          <p>
+            1. We made a Pd file that continuously generates chord progressions
+            capable of key modulations. Chords chosen through weighted
+            probability tables reflect the user's emotions. Drum machine music
+            is generated using audio sampled from Ableton Live.
+          </p>
+          <p>
+            2. After soldering jumper cables onto a pulse sensor, we translated
+            it with an ADC on a Raspberry Pi and used Calculus to determine a
+            user's heartbeat with Python. We set up the sensor on an Arduino and
+            coded a BPM calculator with a button as a second option.
+          </p>
+          <p>
+            3. We coded a GUI for users to submit a photo on their local machine
+            and a facial recognition software with DeepFace analysis their
+            emotion. We used Juypter Notebook to run the AI and UI.
+          </p>
+          <p>
+            4. Finally, Python sockets continuously update and send information
+            to Pd to generate music on the user's local machine through IP.
+          </p>
+          <h2>Inspiration</h2>
+          <p>
+            Through our own experiences playing music, we found a gap when it
+            came to personalization— yet feeling a close bond to music is
+            essential to enjoying it. This inspired us to develop a project that
+            can provide a stronger foundation for that bond, particularly in
+            people new to playing music, such as children. Once forged, the
+            connection motivates people to invest time in music and enjoy what
+            they produce!
+          </p>
+          <ul class="actions special">
+            <li><a href="index.html#second" class="button">Go Home</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <section>
+          <span
+            ><h2>You Music</h2>
+            <a
+              href="https://github.com/theAnshulGupta/youmusic"
+              target="_blank"
+              class="icon brands fa-github alt"
+              ><span class="label">GitHub</span></a
+            ></span
+          >
+        </section>
+        <section>
+          <h4>Site by Anshul Gupta</h4>
+        </section>
+        <p style="font-size: 6px" class="copyright">Theme from HTML5UP</p>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
