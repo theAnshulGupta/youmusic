@@ -81,13 +81,13 @@ def main(host=IP, port=7000):
 
     # ?inputs 
     start = 1  # switch
-    emotion = 1  # mood
-    dis = 1  # dissonance
+    emotion = 3  # mood
+    dis = 0  # dissonance
     dspToggle = 1  # dsp
 
     #! killswitch
-    start = 0
-    dsp = 0
+    #start = 0
+    #dsp = 0
     
     values = {'start': start, 'emotion': emotion, 'dis': dis, 'dspToggle': dspToggle}
     
